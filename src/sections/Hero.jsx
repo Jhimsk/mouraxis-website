@@ -1,3 +1,5 @@
+import projectIntelligence from "../assets/images/project-intelligence.png"
+
 function Hero() {
   return (
     <section className="overflow-hidden bg-[#F5F3EE]">
@@ -41,7 +43,7 @@ function Hero() {
         </div>
 
         {/* RIGHT VISUAL */}
-        <div className="animate-slide-in-right animate-float-panel relative scale-95 lg:scale-90 origin-center">
+        <div className="animate-slide-in-right animate-float-panel relative scale-95 origin-center lg:scale-[0.92]">
           <div className="overflow-hidden rounded-3xl border border-slate-200 bg-[#0B1F33] p-5 shadow-2xl shadow-slate-900/15">
 
             {/* Header */}
@@ -57,40 +59,20 @@ function Hero() {
             </div>
 
             {/* Main visualization */}
-            <div className="relative min-h-[430px] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#112D46] via-[#0D2438] to-[#071521]">
+            <div className="relative min-h-[430px] overflow-hidden rounded-2xl border border-white/10 bg-[#071521]">
 
-              {/* Technical grid */}
-              <div
-                className="absolute inset-0 opacity-25"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(rgba(255,255,255,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px)",
-                  backgroundSize: "38px 38px",
-                }}
+              {/* Project image */}
+              <img
+                src={projectIntelligence}
+                alt="Mouraxis Project Intelligence"
+                className="absolute inset-0 h-full w-full scale-105 object-cover"
               />
 
-              {/* Decorative glow */}
-              <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2F80ED]/10 blur-3xl" />
+              {/* Readability overlay */}
+              <div className="absolute inset-0 bg-[#081C2C]/20" />
 
-              {/* Abstract digital twin */}
-              <div className="absolute left-1/2 top-1/2 h-52 w-52 -translate-x-1/2 -translate-y-1/2 rotate-12 border border-[#2F80ED]/80">
-                <div className="absolute inset-5 border border-white/30" />
-                <div className="absolute inset-10 border border-white/20" />
-
-                <div className="absolute -left-8 top-12 h-px w-16 bg-[#2F80ED]/70" />
-                <div className="absolute -right-8 bottom-12 h-px w-16 bg-[#2F80ED]/70" />
-                <div className="absolute bottom-[-32px] left-1/2 h-16 w-px -translate-x-1/2 bg-[#2F80ED]/70" />
-              </div>
-
-              {/* Control points */}
-              <div className="animate-soft-pulse absolute left-[28%] top-[35%] h-3 w-3 rounded-full bg-[#2F80ED] shadow-[0_0_20px_rgba(47,128,237,0.8)]" />
-
-              <div className="animate-soft-pulse absolute right-[27%] top-[48%] h-3 w-3 rounded-full bg-[#2F80ED] shadow-[0_0_20px_rgba(47,128,237,0.8)]" />
-
-              <div className="animate-soft-pulse absolute bottom-[24%] left-[44%] h-3 w-3 rounded-full bg-[#2F80ED] shadow-[0_0_20px_rgba(47,128,237,0.8)]" />
-
-              {/* Progress card */}
-              <div className="absolute left-5 top-5 rounded-xl border border-white/10 bg-[#081C2C]/80 px-4 py-3 backdrop-blur">
+              {/* Progress */}
+              <div className="absolute left-5 top-5 rounded-xl border border-white/10 bg-[#081C2C]/75 px-4 py-3 backdrop-blur-md">
                 <p className="text-xs uppercase tracking-wider text-slate-400">
                   Progress
                 </p>
@@ -100,8 +82,8 @@ function Hero() {
                 </p>
               </div>
 
-              {/* Coordinate card */}
-              <div className="absolute right-5 top-5 rounded-xl border border-white/10 bg-[#081C2C]/80 px-4 py-3 backdrop-blur">
+              {/* Control Point */}
+              <div className="absolute right-5 top-5 rounded-xl border border-white/10 bg-[#081C2C]/75 px-4 py-3 backdrop-blur-md">
                 <p className="text-xs uppercase tracking-wider text-slate-400">
                   Control Point
                 </p>
@@ -115,8 +97,8 @@ function Hero() {
                 </p>
               </div>
 
-              {/* Accuracy card */}
-              <div className="absolute bottom-5 right-5 rounded-xl border border-white/10 bg-[#081C2C]/80 px-4 py-3 backdrop-blur">
+              {/* Accuracy */}
+              <div className="absolute bottom-5 right-5 rounded-xl border border-white/10 bg-[#081C2C]/75 px-4 py-3 backdrop-blur-md">
                 <p className="text-xs uppercase tracking-wider text-slate-400">
                   Accuracy
                 </p>
