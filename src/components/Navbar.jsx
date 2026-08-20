@@ -6,21 +6,9 @@ function Navbar() {
       <nav className="mx-auto flex h-24 max-w-7xl items-center justify-between px-6 lg:px-8">
 
         {/* Primary Mouraxis Logo */}
-        <a href="/" className="flex items-center gap-4 text-[#081C2C]">
-          <div className="h-12 w-12 bg-blue-500">
-  <LogoMark className="h-12 w-12" />
-</div>
-
-          <div className="flex flex-col">
-            <span className="text-[1.35rem] font-semibold leading-none tracking-[0.24em]">
-              MOURA<span className="text-[#2F80ED]">X</span>IS
-            </span>
-
-            <span className="mt-2 text-[0.62rem] font-medium uppercase tracking-[0.28em] text-slate-500">
-              Infrastructure Intelligence
-            </span>
-          </div>
-        </a>
+        <a href="/" className="flex items-center">
+  <LogoMark className="h-14 w-auto md:h-24" />
+</a>
 
         {/* Navigation */}
         <div className="hidden items-center gap-9 text-sm font-medium text-slate-700 md:flex">
