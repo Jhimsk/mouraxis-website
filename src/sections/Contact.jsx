@@ -47,11 +47,35 @@ function Contact() {
     setStatus("loading")
 
     try {
-      // Temporary front-end simulation.
-      // We will replace this with the real Mouraxis form endpoint.
-      await new Promise((resolve) => setTimeout(resolve, 900))
+     const response = await fetch("https://api.web3forms.com/submit", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  },
+  body: JSON.stringify({
+    access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
 
-      setStatus("success")
+    subject: `New Mouraxis Project Inquiry — ${formData.projectType}`,
+    from_name: "Mouraxis Website",
+
+    name: formData.name,
+    company: formData.company,
+    email: formData.email,
+    project_type: formData.projectType,
+    project_details: formData.details,
+
+    botcheck: "",
+  }),
+})
+
+const result = await response.json()
+
+if (!response.ok || !result.success) {
+  throw new Error(result.message || "Submission failed")
+}
+
+setStatus("success")
       setMessage(
         "Thanks — your project inquiry has been received. We’ll be in touch soon."
       )
