@@ -74,7 +74,12 @@ const result = await response.json()
 if (!response.ok || !result.success) {
   throw new Error(result.message || "Submission failed")
 }
-
+if (window.gtag) {
+  window.gtag("event", "generate_lead", {
+    lead_source: "project_inquiry_form",
+    project_type: formData.projectType,
+  })
+}
 setStatus("success")
       setMessage(
         "Thanks — your project inquiry has been received. We’ll be in touch soon."
