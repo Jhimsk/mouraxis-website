@@ -105,46 +105,45 @@ const capabilities = [
     number: "01",
     title: "Reality Capture",
     description:
-      "High-resolution photogrammetry, LiDAR, 360° imaging, and reality modeling that convert physical environments into measurable digital assets.",
+      "Drone photogrammetry, LiDAR, 360° imaging, and reality modeling that convert buildings, sites, and infrastructure into measurable digital assets.",
     icon: <RealityCaptureIcon />,
   },
   {
     number: "02",
     title: "Geospatial Intelligence",
     description:
-      "GIS analysis, spatial mapping, surveying workflows, and geospatial decision support built to reveal what conventional project data cannot.",
+      "GIS analysis, spatial mapping, surveying workflows, and geospatial decision support that turn location-based data into actionable project intelligence.",
     icon: <GeospatialIcon />,
   },
   {
     number: "03",
     title: "Construction Monitoring",
     description:
-      "Vibration, movement, deformation, condition, and progress monitoring that provides project teams with defensible field intelligence.",
+      "Vibration, movement, deformation, condition, and construction progress monitoring that provides project teams with documented field intelligence.",
     icon: <MonitoringIcon />,
   },
   {
     number: "04",
     title: "Digital Twins",
     description:
-      "Interactive digital representations that connect physical infrastructure with spatial, engineering, and operational information.",
+      "Interactive digital representations of buildings and infrastructure that connect spatial, engineering, condition, and operational information.",
     icon: <DigitalTwinIcon />,
   },
   {
     number: "05",
     title: "Structural Documentation",
     description:
-      "Existing-condition capture, structural mapping, inspections, and technical documentation designed for accuracy, traceability, and decision-making.",
+      "Existing-condition documentation, structural mapping, inspections, and technical records designed for accuracy, traceability, and engineering decision-making.",
     icon: <DocumentationIcon />,
   },
   {
     number: "06",
     title: "Asset Intelligence",
     description:
-      "Integrated project and infrastructure data transformed into clear intelligence for owners, engineers, contractors, and public agencies.",
+      "Integrated infrastructure and project data transformed into decision-ready intelligence for owners, engineers, contractors, and public agencies.",
     icon: <AssetIcon />,
   },
 ]
-
 function Capabilities() {
   return (
     <section
@@ -178,9 +177,9 @@ function Capabilities() {
           </h2>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            Mouraxis combines field technology, geospatial engineering, and
-            analytical workflows to turn complex project conditions into
-            information teams can act on.
+            Mouraxis combines geospatial technology, field data collection, and
+            infrastructure analysis to turn complex site conditions into
+            accurate decision-ready information.
           </p>
         </div>
 

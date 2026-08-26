@@ -20,10 +20,10 @@ function Hero() {
           </h1>
 
           <p className="animate-fade-up-delay-2 mt-7 max-w-xl text-lg leading-8 text-slate-600">
-            Mouraxis transforms reality into actionable infrastructure
-            intelligence through geospatial engineering, reality capture,
-            structural documentation, and advanced spatial analytics.
-          </p>
+            Mouraxis delivers geospatial and infrastructure intelligence through
+            reality capture, digital twins, construction monitoring, structural
+            documentation, and advanced spatial analysis.
+        </p>
 
           <div className="animate-fade-up-delay-2 mt-9 flex flex-wrap gap-4">
             <a
@@ -64,7 +64,7 @@ function Hero() {
               {/* Project image */}
               <img
                 src={projectIntelligence}
-                alt="Mouraxis Project Intelligence"
+                alt="Mouraxis 3D infrastructure digital twin and geospatial intelligence visualization"
                 className="absolute inset-0 h-full w-full scale-105 object-cover"
               />
 
