@@ -107,6 +107,7 @@ const capabilities = [
     description:
       "Drone photogrammetry, LiDAR, 360° imaging, and reality modeling that convert buildings, sites, and infrastructure into measurable digital assets.",
     icon: <RealityCaptureIcon />,
+    href: "/reality-capture/",
   },
   {
     number: "02",
@@ -192,6 +193,7 @@ function Capabilities() {
               icon={capability.icon}
               title={capability.title}
               description={capability.description}
+              href={capability.href}
             />
           ))}
         </div>

@@ -1,4 +1,10 @@
-function CapabilityCard({ icon, title, description, number }) {
+function CapabilityCard({
+  icon,
+  title,
+  description,
+  number,
+  href = "#contact",
+}) {
   return (
     <article className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#2F80ED]/60 hover:shadow-[0_20px_60px_rgba(8,28,44,0.10)]">
 
@@ -27,7 +33,7 @@ function CapabilityCard({ icon, title, description, number }) {
         </p>
 
         <a
-          href="#contact"
+          href={href}
           className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#081C2C] transition-colors duration-200 group-hover:text-[#2F80ED]"
         >
           Learn More
