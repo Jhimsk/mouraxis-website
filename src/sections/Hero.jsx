@@ -1,4 +1,4 @@
-import projectIntelligence from "../assets/images/project-intelligence.png"
+
 
 function Hero() {
   return (
@@ -43,109 +43,119 @@ function Hero() {
         </div>
 
         {/* RIGHT VISUAL */}
-        <div className="animate-slide-in-right animate-float-panel relative scale-95 origin-center lg:scale-[0.92]">
-          <div className="overflow-hidden rounded-3xl border border-slate-200 bg-[#0B1F33] p-5 shadow-2xl shadow-slate-900/15">
+<div className="animate-slide-in-right animate-float-panel relative scale-95 origin-center lg:scale-[0.92]">
+  <div className="overflow-hidden rounded-3xl border border-slate-200 bg-[#0B1F33] p-5 shadow-2xl shadow-slate-900/15">
 
-            {/* Header */}
-            <div className="mb-5 flex items-center justify-between text-xs uppercase tracking-[0.18em]">
-              <span className="text-slate-400">
-                Project Intelligence
-              </span>
+    {/* Header */}
+    <div className="mb-5 flex items-center justify-between text-xs uppercase tracking-[0.18em]">
+      <span className="text-slate-400">
+        Project Intelligence
+      </span>
 
-              <span className="flex items-center gap-2 text-emerald-400">
-                <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.8)]" />
-                Live
-              </span>
-            </div>
+      <span className="flex items-center gap-2 text-emerald-400">
+        <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.8)]" />
+        Live
+      </span>
+    </div>
 
-            {/* Main visualization */}
-            <div className="relative min-h-[430px] overflow-hidden rounded-2xl border border-white/10 bg-[#071521]">
+    {/* Main visualization */}
+    <div className="relative min-h-[430px] overflow-hidden rounded-2xl border border-white/10 bg-[#071521]">
 
-              {/* Project image */}
-              <img
-                src={projectIntelligence}
-                alt="Mouraxis 3D infrastructure digital twin and geospatial intelligence visualization"
-                className="absolute inset-0 h-full w-full scale-105 object-cover"
-              />
+      {/* Project video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-label="Aerial construction reality capture"
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source
+          src="/mouraxis-hero-flyaround.mp4"
+          type="video/mp4"
+        />
+      </video>
 
-              {/* Readability overlay */}
-              <div className="absolute inset-0 bg-[#081C2C]/20" />
+      {/* Readability overlay */}
+      <div className="absolute inset-0 bg-[#081C2C]/20" />
 
-              {/* Progress */}
-              <div className="absolute left-5 top-5 rounded-xl border border-white/10 bg-[#081C2C]/75 px-4 py-3 backdrop-blur-md">
-                <p className="text-xs uppercase tracking-wider text-slate-400">
-                  Progress
-                </p>
+      {/* Capture */}
+      <div className="absolute left-5 top-5 rounded-xl border border-white/10 bg-[#081C2C]/75 px-4 py-3 backdrop-blur-md">
+        <p className="text-xs uppercase tracking-wider text-slate-400">
+          Capture
+        </p>
 
-                <p className="mt-1 text-2xl font-semibold text-white">
-                  82%
-                </p>
-              </div>
+        <p className="mt-1 text-sm font-semibold text-white">
+          Aerial Reality
+        </p>
+      </div>
 
-              {/* Control Point */}
-              <div className="absolute right-5 top-5 rounded-xl border border-white/10 bg-[#081C2C]/75 px-4 py-3 backdrop-blur-md">
-                <p className="text-xs uppercase tracking-wider text-slate-400">
-                  Control Point
-                </p>
+      {/* Dataset */}
+      <div className="absolute right-5 top-5 rounded-xl border border-white/10 bg-[#081C2C]/75 px-4 py-3 backdrop-blur-md">
+        <p className="text-xs uppercase tracking-wider text-slate-400">
+          Dataset
+        </p>
 
-                <p className="mt-1 text-sm font-semibold text-white">
-                  CP-14
-                </p>
+        <p className="mt-1 text-sm font-semibold text-white">
+          High Resolution
+        </p>
 
-                <p className="mt-1 text-xs text-slate-400">
-                  Verified
-                </p>
-              </div>
+        <p className="mt-1 text-xs text-slate-400">
+          Active Capture
+        </p>
+      </div>
 
-              {/* Accuracy */}
-              <div className="absolute bottom-5 right-5 rounded-xl border border-white/10 bg-[#081C2C]/75 px-4 py-3 backdrop-blur-md">
-                <p className="text-xs uppercase tracking-wider text-slate-400">
-                  Accuracy
-                </p>
+      {/* Output */}
+      <div className="absolute bottom-5 right-5 rounded-xl border border-white/10 bg-[#081C2C]/75 px-4 py-3 backdrop-blur-md">
+        <p className="text-xs uppercase tracking-wider text-slate-400">
+          Output
+        </p>
 
-                <p className="mt-1 text-sm font-semibold text-white">
-                  ±0.03'
-                </p>
-              </div>
+        <p className="mt-1 text-sm font-semibold text-white">
+          Spatial Intelligence
+        </p>
+      </div>
 
-            </div>
+    </div>
 
-            {/* Bottom Metrics */}
-            <div className="grid grid-cols-3 gap-3 pt-4 text-center">
-              <div className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-4">
-                <p className="text-xl font-semibold text-white">
-                  14
-                </p>
+    {/* Bottom Metrics */}
+    <div className="grid grid-cols-3 gap-3 pt-4 text-center">
 
-                <p className="mt-1 text-xs text-slate-400">
-                  Control Points
-                </p>
-              </div>
+      <div className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-4">
+        <p className="text-sm font-semibold text-white">
+          Capture
+        </p>
 
-              <div className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-4">
-                <p className="text-xl font-semibold text-white">
-                  ±0.03'
-                </p>
+        <p className="mt-1 text-xs text-slate-400">
+          Site Reality
+        </p>
+      </div>
 
-                <p className="mt-1 text-xs text-slate-400">
-                  Tolerance
-                </p>
-              </div>
+      <div className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-4">
+        <p className="text-sm font-semibold text-white">
+          Process
+        </p>
 
-              <div className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-4">
-                <p className="text-xl font-semibold text-white">
-                  Live
-                </p>
+        <p className="mt-1 text-xs text-slate-400">
+          Spatial Data
+        </p>
+      </div>
 
-                <p className="mt-1 text-xs text-slate-400">
-                  Project Status
-                </p>
-              </div>
-            </div>
+      <div className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-4">
+        <p className="text-sm font-semibold text-white">
+          Deliver
+        </p>
 
-          </div>
-        </div>
+        <p className="mt-1 text-xs text-slate-400">
+          Intelligence
+        </p>
+      </div>
 
+    </div>
+
+  </div>
+</div>
       </div>
     </section>
   )
