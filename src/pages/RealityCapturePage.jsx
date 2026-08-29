@@ -111,7 +111,6 @@ function RealityCapturePage() {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#081C2C]/60 via-transparent to-[#081C2C]/10" />
 
-                {/* Capture type */}
                 <div className="absolute left-5 top-5 rounded-xl border border-white/10 bg-[#081C2C]/80 px-4 py-3 backdrop-blur-md">
                   <p className="text-xs uppercase tracking-wider text-slate-400">
                     Capture Type
@@ -122,7 +121,6 @@ function RealityCapturePage() {
                   </p>
                 </div>
 
-                {/* Dataset */}
                 <div className="absolute right-5 top-5 rounded-xl border border-white/10 bg-[#081C2C]/80 px-4 py-3 text-right backdrop-blur-md">
                   <p className="text-xs uppercase tracking-wider text-slate-400">
                     Dataset
@@ -133,7 +131,6 @@ function RealityCapturePage() {
                   </p>
                 </div>
 
-                {/* Bottom data */}
                 <div className="absolute bottom-5 left-5 right-5 grid grid-cols-2 gap-3 md:grid-cols-3">
 
                   <div className="rounded-xl border border-white/10 bg-[#081C2C]/80 px-4 py-3 backdrop-blur-md">
@@ -206,6 +203,137 @@ function RealityCapturePage() {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* FEATURED CASE STUDY */}
+      <section className="bg-[#081C2C] py-28 text-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+
+            {/* LEFT */}
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#2F80ED]">
+                Featured Case Study
+              </p>
+
+              <h2 className="mt-5 text-4xl font-semibold tracking-tight md:text-5xl">
+                Bridge 001
+              </h2>
+
+              <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+                A bridge infrastructure reality-capture demonstration
+                transformed from aerial imagery into an interactive textured
+                3D reconstruction and dense geospatial point cloud.
+              </p>
+
+              <div className="mt-10 grid grid-cols-2 gap-6">
+
+                <div>
+                  <p className="text-3xl font-semibold text-white">
+                    122
+                  </p>
+                  <p className="mt-1 text-sm text-slate-400">
+                    Images Processed
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-3xl font-semibold text-white">
+                    10.0M
+                  </p>
+                  <p className="mt-1 text-sm text-slate-400">
+                    Reconstructed Points
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-3xl font-semibold text-white">
+                    0.82 cm
+                  </p>
+                  <p className="mt-1 text-sm text-slate-400">
+                    Average GSD
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-3xl font-semibold text-white">
+                    2.76 ha
+                  </p>
+                  <p className="mt-1 text-sm text-slate-400">
+                    Reconstructed Area
+                  </p>
+                </div>
+
+              </div>
+
+              <a
+                href="/projects/bridge-001/"
+                className="mt-10 inline-flex items-center gap-3 rounded-md bg-[#2F80ED] px-7 py-4 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#246FCB]"
+              >
+                Explore Bridge 001 →
+              </a>
+            </div>
+
+            {/* RIGHT */}
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-5 md:p-6">
+
+              <div className="mb-5 px-2">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2F80ED]">
+                  Interactive Reality Model
+                </p>
+
+                <h3 className="mt-3 text-2xl font-semibold">
+                  Infrastructure made explorable.
+                </h3>
+
+                <p className="mt-3 max-w-xl text-sm leading-7 text-slate-400">
+                  Explore the reconstructed bridge directly in the browser with
+                  rotation, zoom, pan, fullscreen viewing, and controlled model
+                  presentation.
+                </p>
+              </div>
+
+              <a
+                href="/projects/bridge-001/"
+                className="group block overflow-hidden rounded-2xl border border-white/10 bg-[#06111d]"
+              >
+                <div className="relative overflow-hidden">
+
+                  <img
+                    src={bridge001Image}
+                    alt="Bridge 001 interactive photogrammetric reality model"
+                    className="w-full object-cover transition duration-500 group-hover:scale-[1.02]"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#06111d]/65 via-transparent to-transparent" />
+
+                  <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-5">
+
+                    <div>
+                      <p className="text-sm font-semibold text-white">
+                        Bridge 001
+                      </p>
+
+                      <p className="mt-1 text-xs text-slate-300">
+                        Interactive 3D Reconstruction
+                      </p>
+                    </div>
+
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-[#081C2C]/80 text-white backdrop-blur-md transition group-hover:border-[#2F80ED] group-hover:bg-[#2F80ED]">
+                      →
+                    </div>
+
+                  </div>
+
+                </div>
+              </a>
+
+            </div>
+
+          </div>
+
         </div>
       </section>
 
@@ -348,141 +476,9 @@ function RealityCapturePage() {
         </div>
       </section>
 
-      {/* FEATURED CASE STUDY */}
-      <section className="bg-[#081C2C] py-28 text-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-
-            {/* LEFT */}
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#2F80ED]">
-                Featured Case Study
-              </p>
-
-              <h2 className="mt-5 text-4xl font-semibold tracking-tight md:text-5xl">
-                Bridge 001
-              </h2>
-
-              <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
-                A bridge infrastructure reality-capture demonstration
-                transformed from aerial imagery into an interactive textured
-                3D reconstruction and dense geospatial point cloud.
-              </p>
-
-              <div className="mt-10 grid grid-cols-2 gap-6">
-
-                <div>
-                  <p className="text-3xl font-semibold text-white">
-                    122
-                  </p>
-                  <p className="mt-1 text-sm text-slate-400">
-                    Images Processed
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-3xl font-semibold text-white">
-                    10.0M
-                  </p>
-                  <p className="mt-1 text-sm text-slate-400">
-                    Reconstructed Points
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-3xl font-semibold text-white">
-                    0.82 cm
-                  </p>
-                  <p className="mt-1 text-sm text-slate-400">
-                    Average GSD
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-3xl font-semibold text-white">
-                    2.76 ha
-                  </p>
-                  <p className="mt-1 text-sm text-slate-400">
-                    Reconstructed Area
-                  </p>
-                </div>
-
-              </div>
-
-              <a
-                href="/projects/bridge-001/"
-                className="mt-10 inline-flex items-center gap-3 rounded-md bg-[#2F80ED] px-7 py-4 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#246FCB]"
-              >
-                Explore Bridge 001 →
-              </a>
-            </div>
-
-            {/* RIGHT */}
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-5 md:p-6">
-
-              <div className="mb-5 px-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2F80ED]">
-                  Interactive Reality Model
-                </p>
-
-                <h3 className="mt-3 text-2xl font-semibold">
-                  Infrastructure made explorable.
-                </h3>
-
-                <p className="mt-3 max-w-xl text-sm leading-7 text-slate-400">
-                  Explore the reconstructed bridge directly in the browser with
-                  rotation, zoom, pan, fullscreen viewing, and controlled model
-                  presentation.
-                </p>
-              </div>
-
-              <a
-                href="/projects/bridge-001/"
-                className="group block overflow-hidden rounded-2xl border border-white/10 bg-[#06111d]"
-              >
-                <div className="relative overflow-hidden">
-
-                  <img
-                    src={bridge001Image}
-                    alt="Bridge 001 interactive photogrammetric reality model"
-                    className="w-full object-cover transition duration-500 group-hover:scale-[1.02]"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#06111d]/65 via-transparent to-transparent" />
-
-                  <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-5">
-
-                    <div>
-                      <p className="text-sm font-semibold text-white">
-                        Bridge 001
-                      </p>
-
-                      <p className="mt-1 text-xs text-slate-300">
-                        Interactive 3D Reconstruction
-                      </p>
-                    </div>
-
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-[#081C2C]/80 text-white backdrop-blur-md transition group-hover:border-[#2F80ED] group-hover:bg-[#2F80ED]">
-                      →
-                    </div>
-
-                  </div>
-
-                </div>
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
       {/* APPLICATIONS */}
       <section className="relative overflow-hidden bg-[#EEF2F5] py-28">
 
-        {/* Technical grid */}
         <div className="pointer-events-none absolute inset-0 opacity-[0.03]">
           <div
             className="h-full w-full"
