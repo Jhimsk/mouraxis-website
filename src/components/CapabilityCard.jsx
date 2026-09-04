@@ -4,10 +4,15 @@ function CapabilityCard({
   description,
   number,
   href = "#contact",
+  ctaLabel,
 }) {
+  const isContactLink = href === "#contact"
+
+  const buttonLabel =
+    ctaLabel || (isContactLink ? "Start a Project" : "Learn More")
+
   return (
     <article className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#2F80ED]/60 hover:shadow-[0_20px_60px_rgba(8,28,44,0.10)]">
-
       {/* Subtle blue glow */}
       <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[#2F80ED]/0 blur-3xl transition-all duration-500 group-hover:bg-[#2F80ED]/10" />
 
@@ -36,14 +41,13 @@ function CapabilityCard({
           href={href}
           className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#081C2C] transition-colors duration-200 group-hover:text-[#2F80ED]"
         >
-          Learn More
+          {buttonLabel}
 
           <span className="transition-transform duration-200 group-hover:translate-x-1">
             →
           </span>
         </a>
       </div>
-
     </article>
   )
 }

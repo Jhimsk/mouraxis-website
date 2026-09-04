@@ -4,35 +4,35 @@ const steps = [
     title: "Capture",
     subtitle: "Reality Capture",
     description:
-      "Collect accurate field data using drones, imaging, scanning, and site documentation.",
+      "Collect high-quality field imagery and spatial data using aerial and ground-based capture methods.",
   },
   {
     number: "02",
     title: "Process",
     subtitle: "Photogrammetry + Spatial Data",
     description:
-      "Transform raw field information into structured, measurable digital datasets.",
+      "Transform raw field observations into organized, measurable, and georeferenced digital datasets.",
   },
   {
     number: "03",
     title: "Model",
-    subtitle: "Point Clouds + Digital Twins",
+    subtitle: "Point Clouds + 3D Environments",
     description:
-      "Build digital representations of physical assets, sites, and infrastructure.",
+      "Build digital representations of sites, structures, and infrastructure from processed spatial data.",
   },
   {
     number: "04",
     title: "Analyze",
-    subtitle: "Geospatial Intelligence",
+    subtitle: "Spatial Intelligence",
     description:
-      "Extract patterns, measurements, relationships, and project intelligence from the data.",
+      "Extract measurements, relationships, change, and useful project information from the digital dataset.",
   },
   {
     number: "05",
-    title: "Decide",
-    subtitle: "Engineering Insight",
+    title: "Deliver",
+    subtitle: "Decision-Ready Outputs",
     description:
-      "Turn technical information into clear, decision-ready outputs for project teams.",
+      "Package the results into accessible models, maps, documentation, and interactive project intelligence.",
   },
 ]
 
@@ -40,7 +40,7 @@ function Technology() {
   return (
     <section
       id="technology"
-      className="relative overflow-hidden bg-[#081C2C] py-28 text-white"
+      className="relative scroll-mt-24 overflow-hidden bg-[#081C2C] py-28 text-white"
     >
       {/* Background grid */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.06]">
@@ -64,12 +64,13 @@ function Technology() {
           <h2 className="mt-5 text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
             From field reality
             <br />
-            to confident decisions.
+            to digital intelligence.
           </h2>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Mouraxis connects capture, modeling, analysis, and engineering
-            insight into one continuous infrastructure intelligence workflow.
+            Mouraxis connects field capture, spatial processing, 3D
+            reconstruction, analysis, and digital delivery into one continuous
+            workflow.
           </p>
         </div>
 
@@ -110,12 +111,20 @@ function Technology() {
         </div>
 
         {/* Bottom statement */}
-        <div className="mt-16 border-t border-white/10 pt-8">
+        <div className="mt-16 flex flex-col justify-between gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center">
           <p className="max-w-3xl text-base leading-7 text-slate-400">
-            The technology is only useful when it improves understanding.
-            Mouraxis is built around converting complex field conditions into
-            information people can actually use.
+            Technology is only valuable when the output is usable. Mouraxis
+            focuses on turning complex physical conditions into digital
+            information that project teams can understand, access, and apply.
           </p>
+
+          <a
+            href="#contact"
+            className="inline-flex shrink-0 items-center gap-3 text-sm font-semibold text-white transition-colors duration-200 hover:text-[#2F80ED]"
+          >
+            Start a Project
+            <span>→</span>
+          </a>
         </div>
       </div>
     </section>

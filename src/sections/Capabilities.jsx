@@ -105,51 +105,57 @@ const capabilities = [
     number: "01",
     title: "Reality Capture",
     description:
-      "Drone photogrammetry, LiDAR, 360° imaging, and reality modeling that convert buildings, sites, and infrastructure into measurable digital assets.",
+      "Georeferenced 3D models, orthomosaics, point clouds, aerial imagery, and existing-condition datasets created from drone and ground-based capture.",
     icon: <RealityCaptureIcon />,
     href: "/reality-capture/",
   },
   {
     number: "02",
-    title: "Geospatial Intelligence",
+    title: "Geospatial Mapping",
     description:
-      "GIS analysis, spatial mapping, surveying workflows, and geospatial decision support that turn location-based data into actionable project intelligence.",
+      "Aerial maps, surface models, site measurements, volumetric analysis, GIS-ready datasets, and spatial products built for project planning and decision-making.",
     icon: <GeospatialIcon />,
+    href: "#contact",
   },
   {
     number: "03",
     title: "Construction Monitoring",
     description:
-      "Vibration, movement, deformation, condition, and construction progress monitoring that provides project teams with documented field intelligence.",
+      "Progress documentation, recurring site capture, movement and condition records, visual comparisons, and field datasets that document change over time.",
     icon: <MonitoringIcon />,
+    href: "#contact",
   },
   {
     number: "04",
     title: "Digital Twins",
     description:
-      "Interactive digital representations of buildings and infrastructure that connect spatial, engineering, condition, and operational information.",
+      "Interactive 3D environments that organize site geometry, imagery, asset information, and project data into a single accessible digital representation.",
     icon: <DigitalTwinIcon />,
+    href: "#contact",
   },
   {
     number: "05",
     title: "Structural Documentation",
     description:
-      "Existing-condition documentation, structural mapping, inspections, and technical records designed for accuracy, traceability, and engineering decision-making.",
+      "Existing-condition models, mapped observations, photographic records, dimensional documentation, and organized datasets for infrastructure and building assessments.",
     icon: <DocumentationIcon />,
+    href: "#contact",
   },
   {
     number: "06",
     title: "Asset Intelligence",
     description:
-      "Integrated infrastructure and project data transformed into decision-ready intelligence for owners, engineers, contractors, and public agencies.",
+      "Project and infrastructure data organized into interactive viewers, condition records, spatial databases, and decision-ready digital deliverables.",
     icon: <AssetIcon />,
+    href: "#contact",
   },
 ]
+
 function Capabilities() {
   return (
     <section
       id="solutions"
-      className="relative overflow-hidden bg-[#F5F3EE] py-28"
+      className="relative scroll-mt-24 overflow-hidden bg-[#F5F3EE] py-28"
     >
       {/* Background technical detail */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.035]">
@@ -164,7 +170,6 @@ function Capabilities() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-
         {/* Section header */}
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#2F80ED]">
@@ -172,15 +177,15 @@ function Capabilities() {
           </p>
 
           <h2 className="mt-5 text-4xl font-semibold leading-tight tracking-tight text-[#081C2C] md:text-6xl">
-            Infrastructure intelligence
+            Real-world data.
             <br />
-            for every phase of a project.
+            Decision-ready deliverables.
           </h2>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            Mouraxis combines geospatial technology, field data collection, and
-            infrastructure analysis to turn complex site conditions into
-            accurate decision-ready information.
+            Mouraxis captures physical infrastructure and transforms it into
+            measurable digital information that project teams can visualize,
+            analyze, document, and use.
           </p>
         </div>
 
@@ -201,9 +206,10 @@ function Capabilities() {
         {/* Bottom statement */}
         <div className="mt-16 flex flex-col justify-between gap-6 border-t border-slate-300/70 pt-8 md:flex-row md:items-center">
           <p className="max-w-2xl text-base leading-7 text-slate-600">
-            From initial documentation through long-term asset intelligence,
-            Mouraxis is built to deliver one consistent layer of truth across
-            the infrastructure lifecycle.
+            From field capture to final digital delivery, Mouraxis creates
+            consistent project intelligence that helps teams understand
+            existing conditions, document progress, and make better-informed
+            decisions.
           </p>
 
           <a
@@ -214,7 +220,6 @@ function Capabilities() {
             <span>→</span>
           </a>
         </div>
-
       </div>
     </section>
   )

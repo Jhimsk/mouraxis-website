@@ -3,7 +3,6 @@ function Footer() {
     <footer className="border-t border-white/10 bg-[#061521] text-white">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-
           {/* Brand */}
           <div className="lg:col-span-2">
             <p className="text-xl font-semibold tracking-[0.22em]">
@@ -15,10 +14,18 @@ function Footer() {
             </p>
 
             <p className="mt-6 max-w-md text-sm leading-7 text-slate-400">
-              Geospatial technology, reality capture, monitoring, and spatial
-              intelligence designed to help infrastructure teams understand
-              physical conditions and make confident decisions.
+              Mouraxis transforms real-world infrastructure into measurable
+              digital information through reality capture, geospatial mapping,
+              3D modeling, and spatial intelligence.
             </p>
+
+            <a
+              href="#contact"
+              className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors duration-200 hover:text-[#2F80ED]"
+            >
+              Start a Project
+              <span>→</span>
+            </a>
           </div>
 
           {/* Explore */}
@@ -28,42 +35,67 @@ function Footer() {
             </p>
 
             <div className="mt-5 flex flex-col gap-3 text-sm text-slate-400">
-              <a href="#solutions" className="transition hover:text-[#2F80ED]">
-                Capabilities
+              <a
+                href="#solutions"
+                className="transition hover:text-[#2F80ED]"
+              >
+                Solutions
               </a>
 
-              <a href="#lab" className="transition hover:text-[#2F80ED]">
-                Mouraxis Labs
+              <a
+                href="#industries"
+                className="transition hover:text-[#2F80ED]"
+              >
+                Industries
               </a>
 
-              <a href="#technology" className="transition hover:text-[#2F80ED]">
+              <a
+                href="#projects"
+                className="transition hover:text-[#2F80ED]"
+              >
+                Projects
+              </a>
+
+              <a
+                href="#technology"
+                className="transition hover:text-[#2F80ED]"
+              >
                 Technology
-              </a>
-
-              <a href="#process" className="transition hover:text-[#2F80ED]">
-                How We Work
               </a>
             </div>
           </div>
 
-          {/* Contact */}
+          {/* Projects + Contact */}
           <div>
             <p className="text-sm font-semibold text-white">
               Connect
             </p>
 
             <div className="mt-5 flex flex-col gap-3 text-sm text-slate-400">
-              <a href="#contact" className="transition hover:text-[#2F80ED]">
-                Start a Project
+              <a
+                href="/projects/bridge-001/"
+                className="transition hover:text-[#2F80ED]"
+              >
+                Bridge 001
+              </a>
+
+              <a
+                href="#contact"
+                className="transition hover:text-[#2F80ED]"
+              >
+                Project Inquiry
               </a>
 
               <span>South Florida</span>
-              <span>Serving projects nationwide</span>
+
+              <span>
+                Serving projects nationwide
+              </span>
             </div>
           </div>
-
         </div>
 
+        {/* Bottom Bar */}
         <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-7 text-xs text-slate-500 md:flex-row md:items-center md:justify-between">
           <p>
             © {new Date().getFullYear()} Mouraxis. All rights reserved.

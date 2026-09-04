@@ -1,8 +1,8 @@
 import Hero from "../sections/Hero"
 import Capabilities from "../sections/Capabilities"
+import Industries from "../sections/Industries"
 import Lab from "../sections/Lab"
 import Technology from "../sections/Technology"
-import Process from "../sections/Process"
 import Contact from "../sections/Contact"
 
 function HomePage() {
@@ -10,9 +10,9 @@ function HomePage() {
     <>
       <Hero />
       <Capabilities />
+      <Industries />
       <Lab />
       <Technology />
-      <Process />
       <Contact />
     </>
   )

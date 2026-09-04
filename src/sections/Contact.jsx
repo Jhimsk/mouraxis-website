@@ -5,7 +5,11 @@ function Contact() {
     name: "",
     company: "",
     email: "",
+    phone: "",
     projectType: "Reality Capture",
+    location: "",
+    timeline: "",
+    deliverables: "",
     details: "",
   })
 
@@ -47,40 +51,47 @@ function Contact() {
     setStatus("loading")
 
     try {
-     const response = await fetch("https://api.web3forms.com/submit", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    Accept: "application/json",
-  },
-  body: JSON.stringify({
-    access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
 
-    subject: `New Mouraxis Project Inquiry — ${formData.projectType}`,
-    from_name: "Mouraxis Website",
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
 
-    name: formData.name,
-    company: formData.company,
-    email: formData.email,
-    project_type: formData.projectType,
-    project_details: formData.details,
+          subject: `New Mouraxis Project Inquiry — ${formData.projectType}`,
+          from_name: "Mouraxis Website",
 
-    botcheck: "",
-  }),
-})
+          name: formData.name,
+          company: formData.company,
+          email: formData.email,
+          phone: formData.phone,
+          project_type: formData.projectType,
+          project_location: formData.location,
+          project_timeline: formData.timeline,
+          requested_deliverables: formData.deliverables,
+          project_details: formData.details,
 
-const result = await response.json()
+          botcheck: "",
+        }),
+      })
 
-if (!response.ok || !result.success) {
-  throw new Error(result.message || "Submission failed")
-}
-if (window.gtag) {
-  window.gtag("event", "generate_lead", {
-    lead_source: "project_inquiry_form",
-    project_type: formData.projectType,
-  })
-}
-setStatus("success")
+      const result = await response.json()
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Submission failed")
+      }
+
+      if (window.gtag) {
+        window.gtag("event", "generate_lead", {
+          lead_source: "project_inquiry_form",
+          project_type: formData.projectType,
+        })
+      }
+
+      setStatus("success")
       setMessage(
         "Thanks — your project inquiry has been received. We’ll be in touch soon."
       )
@@ -89,7 +100,11 @@ setStatus("success")
         name: "",
         company: "",
         email: "",
+        phone: "",
         projectType: "Reality Capture",
+        location: "",
+        timeline: "",
+        deliverables: "",
         details: "",
       })
     } catch {
@@ -144,9 +159,9 @@ setStatus("success")
 
           <form onSubmit={handleSubmit} className="grid gap-6">
 
+            {/* Name + Company */}
             <div className="grid gap-6 md:grid-cols-2">
 
-              {/* Name */}
               <div>
                 <label
                   htmlFor="name"
@@ -167,7 +182,6 @@ setStatus("success")
                 />
               </div>
 
-              {/* Company */}
               <div>
                 <label
                   htmlFor="company"
@@ -187,27 +201,52 @@ setStatus("success")
                   className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-white outline-none transition placeholder:text-slate-500 focus:border-[#2F80ED]"
                 />
               </div>
+
             </div>
 
-            {/* Email */}
-            <div>
-              <label
-                htmlFor="email"
-                className="mb-2 block text-sm font-medium text-slate-300"
-              >
-                Email
-              </label>
+            {/* Email + Phone */}
+            <div className="grid gap-6 md:grid-cols-2">
 
-              <input
-                id="email"
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="you@company.com"
-                autoComplete="email"
-                className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-white outline-none transition placeholder:text-slate-500 focus:border-[#2F80ED]"
-              />
+              <div>
+                <label
+                  htmlFor="email"
+                  className="mb-2 block text-sm font-medium text-slate-300"
+                >
+                  Email
+                </label>
+
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="you@company.com"
+                  autoComplete="email"
+                  className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-white outline-none transition placeholder:text-slate-500 focus:border-[#2F80ED]"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="mb-2 block text-sm font-medium text-slate-300"
+                >
+                  Phone
+                </label>
+
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="(555) 555-5555"
+                  autoComplete="tel"
+                  className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-white outline-none transition placeholder:text-slate-500 focus:border-[#2F80ED]"
+                />
+              </div>
+
             </div>
 
             {/* Project Type */}
@@ -216,7 +255,7 @@ setStatus("success")
                 htmlFor="projectType"
                 className="mb-2 block text-sm font-medium text-slate-300"
               >
-                Project Type
+                Service Needed
               </label>
 
               <select
@@ -227,13 +266,81 @@ setStatus("success")
                 className="w-full rounded-xl border border-white/10 bg-[#10283D] px-4 py-3.5 text-white outline-none transition focus:border-[#2F80ED]"
               >
                 <option>Reality Capture</option>
-                <option>Geospatial Intelligence</option>
+                <option>Geospatial Mapping</option>
                 <option>Construction Monitoring</option>
                 <option>Digital Twin</option>
                 <option>Structural Documentation</option>
                 <option>Asset Intelligence</option>
                 <option>Other</option>
               </select>
+            </div>
+
+            {/* Location + Timeline */}
+            <div className="grid gap-6 md:grid-cols-2">
+
+              <div>
+                <label
+                  htmlFor="location"
+                  className="mb-2 block text-sm font-medium text-slate-300"
+                >
+                  Project Location
+                </label>
+
+                <input
+                  id="location"
+                  name="location"
+                  type="text"
+                  value={formData.location}
+                  onChange={handleChange}
+                  placeholder="City, State"
+                  className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-white outline-none transition placeholder:text-slate-500 focus:border-[#2F80ED]"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="timeline"
+                  className="mb-2 block text-sm font-medium text-slate-300"
+                >
+                  Desired Timeline
+                </label>
+
+                <select
+                  id="timeline"
+                  name="timeline"
+                  value={formData.timeline}
+                  onChange={handleChange}
+                  className="w-full rounded-xl border border-white/10 bg-[#10283D] px-4 py-3.5 text-white outline-none transition focus:border-[#2F80ED]"
+                >
+                  <option value="">Select timeline</option>
+                  <option>As soon as possible</option>
+                  <option>Within 1 week</option>
+                  <option>Within 2–4 weeks</option>
+                  <option>Within 1–3 months</option>
+                  <option>Planning / Future Project</option>
+                </select>
+              </div>
+
+            </div>
+
+            {/* Deliverables */}
+            <div>
+              <label
+                htmlFor="deliverables"
+                className="mb-2 block text-sm font-medium text-slate-300"
+              >
+                Requested Deliverables
+              </label>
+
+              <input
+                id="deliverables"
+                name="deliverables"
+                type="text"
+                value={formData.deliverables}
+                onChange={handleChange}
+                placeholder="3D model, orthomosaic, progress documentation, point cloud..."
+                className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-white outline-none transition placeholder:text-slate-500 focus:border-[#2F80ED]"
+              />
             </div>
 
             {/* Project Details */}
@@ -251,12 +358,12 @@ setStatus("success")
                 rows="5"
                 value={formData.details}
                 onChange={handleChange}
-                placeholder="Tell us about the project, location, objectives, and timeline."
+                placeholder="Describe the project, site conditions, objectives, access considerations, and anything else we should know."
                 className="w-full resize-none rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-white outline-none transition placeholder:text-slate-500 focus:border-[#2F80ED]"
               />
             </div>
 
-            {/* Status message */}
+            {/* Status */}
             {message && (
               <div
                 className={`rounded-xl border px-4 py-3 text-sm ${

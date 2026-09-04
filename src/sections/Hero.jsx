@@ -1,4 +1,4 @@
-
+import heroVideo from "../assets/video/mouraxis-hero.mp4"
 
 function Hero() {
   return (
@@ -71,10 +71,7 @@ function Hero() {
         aria-label="Aerial construction reality capture"
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source
-          src="/mouraxis-hero-flyaround.mp4"
-          type="video/mp4"
-        />
+        <source src={heroVideo} type="video/mp4" />
       </video>
 
       {/* Readability overlay */}
